@@ -19,7 +19,7 @@ public class BubbleController {
 
     @PostMapping("/sort")
     public BubbleResponse bubbleSort(@RequestBody BubbleRequest bubbleRequest){
-        return bubbleService.sort(bubbleRequest.getNumbers());
+        return bubbleService.bubbleSort(bubbleRequest.getNumbers());
     }
 
 }

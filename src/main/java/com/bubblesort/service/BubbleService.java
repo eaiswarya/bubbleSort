@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class BubbleService {
-    public BubbleResponse sort(int[] numbers){
+    public BubbleResponse bubbleSort(int[] numbers){
         long startTime = System.nanoTime();
         int n = numbers.length;
         boolean swapped;
@@ -25,8 +25,6 @@ public class BubbleService {
         while (swapped);
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
-
-        System.out.println("Sorting time: " + elapsedTime + " seconds");
         return new BubbleResponse(numbers,elapsedTime);
     }
 }
